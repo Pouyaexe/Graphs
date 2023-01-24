@@ -75,5 +75,5 @@ nx.draw_networkx_labels(G, pos)
 plt.show()
  
 # perform A* search
-result = a_star(G, 1, 6)
+result = a_star(G, 1, 6) 
 print("Shortest path cost:", result)
