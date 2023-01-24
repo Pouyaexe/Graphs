@@ -66,7 +66,14 @@ G.add_edge(3, 4, weight=1)
 G.add_edge(4, 5, weight=3)
 G.add_edge(4, 6, weight=5)
 G.add_edge(5, 6, weight=1)
-
+ 
+# plot the graph
+pos = nx.spring_layout(G)
+nx.draw_networkx_nodes(G, pos)
+nx.draw_networkx_edges(G, pos)
+nx.draw_networkx_labels(G, pos)
+plt.show()
+ 
 # perform A* search
 result = a_star(G, 1, 6)
 print("Shortest path cost:", result)
