@@ -38,9 +38,5 @@ nx.draw(G, with_labels=True, font_weight='bold')
 edge_labels = nx.get_edge_attributes(G, 'weight')
 print('edge_labels: ', edge_labels)
 nx.draw_networkx_edge_labels(G, pos=nx.spring_layout(G), edge_labels=edge_labels)
-# Weights are all over the place, so we need to adjust the position of the labels to make them readable
-edge_labels_pos = {(1, 2): (0.5, 0.5), (1, 3): (0.5, 0.5), (1, 4): (0.5, 0.5), (2, 5): (0.5, 0.5), (2, 6): (0.5, 0.5), (4, 7): (0.5, 0.5), (4, 8): (0.5, 0.5), (6, 9): (0.5, 0.5), (6, 10): (0.5, 0.5), (6, 11): (0.5, 0.5), (8, 12): (0.5, 0.5), (8, 13): (0.5, 0.5)}
-nx.draw_networkx_edge_labels(G, pos=nx.spring_layout(G), edge_labels=edge_labels, label_pos=edge_labels_pos)
-
 # show the graph
 plt.show()
